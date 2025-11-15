@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { aboutPageContent } from "../config";
+import ResumeItem from "../components/ResumeItem.astro";
+import SocialLinkBox from "../components/SocialLinkBox.astro";
+import {marked} from "marked"
+
+const superpowers = marked.parse(aboutPageContent.superpowers)
+const connectDescription = marked.parse(aboutPageContent.connect.description)
+---
+
+<Layout seo={aboutPageContent.seo}>
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="font-bold text-3xl">About</h1>
+  </section>
+
+  <section class="mt-12 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
+    <h2 class="mb-8 sm:mb-0 opacity-60">Superpowers</h2>
+      <div class="mb-6">
+        <Fragment set:html={superpowers} />
+      </div>
+  </section>
+
+  <section class="mt-12 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
+    <h2 class="mb-8 sm:mb-0 opacity-60">Learning</h2>
+      <div class="mb-6">
+        <Fragment set:html={connectDescription} />
+      </div>
+  </section>
+
+  <section class="mt-12 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
+    <h2 class="mb-8 sm:mb-0 opacity-60">Contact</h2>
+    <div>
+      <div class="grid grid-cols-2 gap-2 group">
+        {
+          aboutPageContent.connect.links.map((item) => (
+            <SocialLinkBox {...item} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
