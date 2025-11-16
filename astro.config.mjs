@@ -6,12 +6,11 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), icon()],
-  output: "server",
-  adapter: node({
-    mode: "standalone",
-  }),
+site: 'https://axinlab.github.io',
+base: '/axinlab.github.io',
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
 });
+
+
