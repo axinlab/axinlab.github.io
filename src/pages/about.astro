@@ -7,6 +7,8 @@ import SocialLinkBox from "../components/SocialLinkBox.astro";
 import {marked} from "marked"
 
 const superpowers = marked.parse(aboutPageContent.superpowers)
+const learning = marked.parse(aboutPageContent.learning)
+const hobbies = marked.parse(aboutPageContent.hobbies)
 const connectDescription = marked.parse(aboutPageContent.connect.description)
 ---
 
@@ -15,22 +17,29 @@ const connectDescription = marked.parse(aboutPageContent.connect.description)
     <h1 class="font-bold text-3xl">About</h1>
   </section>
 
-  <section class="mt-12 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60">Superpowers</h2>
+  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
+    <h2 class="mb-4 opacity-60 text-xl">My Superpowers</h2>
       <div class="mb-6">
         <Fragment set:html={superpowers} />
       </div>
   </section>
 
-  <section class="mt-12 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60">Learning</h2>
+  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
+    <h2 class="mb-4 opacity-60 text-xl">Skills I’m Still Learning</h2>
       <div class="mb-6">
-        <Fragment set:html={connectDescription} />
+        <Fragment set:html={learning} />
       </div>
   </section>
 
-  <section class="mt-12 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60">Contact</h2>
+  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
+    <h2 class="mb-4 opacity-60 text-xl">Things That Bring Me Joy</h2>
+      <div class="mb-6">
+        <Fragment set:html={hobbies} />
+      </div>
+  </section>
+
+  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
+    <h2 class="mb-4 opacity-60 text-xl">Contact</h2>
     <div>
       <div class="grid grid-cols-2 gap-2 group">
         {

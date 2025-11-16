@@ -48,6 +48,8 @@ export type ResumeItem = {
 export type AboutPageContent = {
   seo: SEOInfo;
   superpowers: string;
+  learning: string;
+  hobbies: string;
   connect: {
     description: string;
     links: SocialLink[];

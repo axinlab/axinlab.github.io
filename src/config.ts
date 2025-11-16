@@ -93,6 +93,24 @@ export const aboutPageContent: AboutPageContent = {
   **Goal Focus** 💪 <br>
   Getting things done motivates me. Never heard about it, but needs to be done? I’ll sit down, do some research and deliver the best result I can.
   `, // Markdown is supported
+
+  learning:`
+  **User Testing** 🔍 <br>
+  Many steps, decisions and people in the process. I’ve done it in the past, but feel like there’s so much more to learn. This year I’m writing a bachelor thesis on this!
+  <br><br>
+  **Animations** 🎬 <br>
+  Users love MOTION and it is pretty fun to make designs live. I’m not a pro, but played around with Lottie and Rive.
+  <br><br>
+  **3D Graphics** 🪩 <br>
+  Always thought 3D has a high entry threshold, and while I wouldn’t call it easy, Blender is a great tool. I’ve designed an exhibition booth for a company in less then a month!
+  <br><br>
+  **Graphic Design** 📐 <br>
+  Designing for print is a whole new area of expertize but, oh boy! It is so satisfying to see the printed assets ready.
+  `, // Markdown is supported
+
+  hobbies: `
+  Rock Climbing  |  Pottery  |  Baking  |  Photography  |  Digital Art 
+  `,
   
   connect: {
     description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
@@ -103,7 +121,7 @@ export const aboutPageContent: AboutPageContent = {
 // Projects (/projects)
 export const projectsPageContent: ProjectPageContent = {
   seo: {
-    title: "Projects | Tim Witzdam",
+    title: "Projects | Anna Kocaj",
     description: "Check out what I've been working on.",
     image: identity.logo,
   },
@@ -136,7 +154,7 @@ export const projectsPageContent: ProjectPageContent = {
 // Blog (/blog)
 export const blogPageContent: BlogPageContent = {
   seo: {
-    title: "Blog | Tim Witzdam",
+    title: "Blog | Anna Kocaj",
     description: "Thoughts, stories and ideas.",
     image: identity.logo,
   },
