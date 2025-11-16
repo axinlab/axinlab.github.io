@@ -8,7 +8,6 @@ import node from "@astrojs/node";
 export default defineConfig({
   site: 'https://axinlab.github.io',
   integrations: [tailwind(), icon()],
-  output: "static",
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
