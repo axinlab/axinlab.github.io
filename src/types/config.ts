@@ -66,7 +66,6 @@ export type Project = {
 
 export type ProjectPageContent = {
   seo: SEOInfo;
-  subtitle: string;
   projects: Project[];
 };
 
