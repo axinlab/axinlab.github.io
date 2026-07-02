@@ -1,0 +1,129 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+
+const seo = {
+  title: "Loading Group of Products | Anna Kocaj",
+  description:
+    "Case study placeholder: moving product-group loading from recall to recognition to reduce user effort.",
+  image: "/portfolio.png",
+};
+---
+
+<Layout seo={seo}>
+  <!-- HERO -->
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-1 opacity-50 hover:opacity-100 transition-opacity text-sm mb-8"
+    >
+      ← Back to projects
+    </a>
+
+    <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
+      Case Study
+    </p>
+    <h1 class="font-bold text-3xl mb-4 leading-snug">
+      Improving Loading of Product Groups
+    </h1>
+    <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
+      Moving product-group loading from recall to recognition to reduce user effort.
+    </p>
+
+    <!-- Overview grid -->
+    <div
+      class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
+    >
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Role</p>
+        <p class="text-sm font-medium">TBD</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Timeline
+        </p>
+        <p class="text-sm font-medium">TBD</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Team</p>
+        <p class="text-sm font-medium">TBD</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Tools</p>
+        <p class="text-sm font-medium">TBD</p>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="rounded-xl overflow-hidden mb-16 bg-gray-800">
+      <Image
+        src="/portfolio.png"
+        alt="Loading Group of Products placeholder"
+        width={1200}
+        height={675}
+        class="w-full object-cover"
+      />
+      <p class="text-xs opacity-30 text-center py-2">
+        Placeholder — replace with actual product screenshot
+      </p>
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
+    <div
+      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
+    >
+      📌 <em>Placeholder: Describe why recall-based loading was a problem for users</em>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-8">Process</h2>
+    <div
+      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
+    >
+      📌 <em>Placeholder: Add research, design, and iteration steps</em>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
+    <div
+      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
+    >
+      📌 <em>Placeholder: Add task-time or error-rate metrics</em>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <section
+    class="max-w-2xl mx-auto px-6 mb-16 flex justify-between items-center border-t border-white/10 pt-8"
+  >
+    <a
+      href="/projects/linked-accounts"
+      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+    >
+      ← Linked Accounts Redesign
+    </a>
+    <a
+      href="/projects/edge-cases-workshop"
+      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+    >
+      Next: Edge Cases Workshop →
+    </a>
+  </section>
+</Layout>
+
+<style>
+  strong {
+    color: white;
+    font-weight: 600;
+  }
+  em {
+    color: inherit;
+  }
+</style>

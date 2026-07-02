@@ -25,14 +25,28 @@ const connectDescription = marked.parse(aboutPageContent.connect.description)
   </section>
 
   <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
-    <h2 class="mb-4 opacity-60 text-xl">Skills I’m Still Learning</h2>
+    <h2 class="mb-4 opacity-60 text-xl">Still Learning</h2>
       <div class="mb-6">
         <Fragment set:html={learning} />
       </div>
   </section>
 
   <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
-    <h2 class="mb-4 opacity-60 text-xl">Things That Bring Me Joy</h2>
+    <h2 class="mb-4 opacity-60 text-xl">Certifications</h2>
+      <div class="mb-6">
+        {
+          aboutPageContent.certifications.map((cert) => (
+            <p class="mb-1">
+              <span class="font-medium">{cert.title}</span>
+              <span class="opacity-60"> — {cert.issuer}</span>
+            </p>
+          ))
+        }
+      </div>
+  </section>
+
+    <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
+    <h2 class="mb-4 opacity-60 text-xl">My Hobbies</h2>
       <div class="mb-6">
         <Fragment set:html={hobbies} />
       </div>

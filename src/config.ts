@@ -27,10 +27,7 @@ export const navBarLinks: NavBarLink[] = [
     title: "Projects",
     url: "/projects",
   },
-  {
-    title: "Blog",
-    url: "/blog",
-  },
+
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -52,21 +49,18 @@ export const homePageContent: HomePageContent = {
   seo: {
     title: "Anna Kocaj",
     description:
-      "I use empathy and curiosity to create intuitive, enjoyable user experiences.",
+      "Product designer with 3+ years of experience",
     image: identity.logo,
   },
-  role: "UX/UI Designer and Engineering Student",
+  role: "Product Designer with Startup & Enterprise Experience",
   description:
-    "I use empathy and curiosity to create intuitive, enjoyable user experiences that not only look good but also work seamlessly.",
+    "Product Designer with 3+ years of experience designing for complex, technical products. Co-founder of an open-source software company. WCAG accessibility certified.",
   socialLinks: socialLinks,
   links: [
     {
-      title: "My Projects",
-      url: "/projects",
-    },
-    {
-      title: "About Me",
-      url: "/about",
+      title: "View My Resume",
+      url: "/resume-02.07.26.pdf",
+      external: true,
     },
   ],
 };
@@ -81,37 +75,42 @@ export const aboutPageContent: AboutPageContent = {
   },
 
   superpowers:`
-  **Empathy** 🤝 <br>
-  This is what made me go into designing for users and learning their needs. Learning humans is fascinating!
+  **Empathy** <br>
+  Understanding the humans behind a product is what drew me to design, and what keeps me here. I research deeply and ask the uncomfortable questions.
   <br><br>
-  **Figma** 🎨 <br>
-  I LOVE this tool. When I first tried it something just clicked, now I use it daily for every design task I can.
+  **Team Work** <br>
+  I'm comfortable in rooms with engineers, product managers, enterprise clients, and executives. I've pitched decisions, facilitated workshops, and iterated in public.
   <br><br>
-  **Team Work** 👥 <br>
-  I love learning about people and I really value making new connections. Meetups, conferences, hackatons - you’ll certainly meet me there!
-  <br><br>
-  **Goal Focus** 💪 <br>
-  Getting things done motivates me. Never heard about it, but needs to be done? I’ll sit down, do some research and deliver the best result I can.
-  `, // Markdown is supported
+  **Goal Focus** <br>
+  Getting things done motivates me. Never heard about it, but needs to be done? I’ll sit down, do some research and deliver the best result I can.  `, // Markdown is supported
 
   learning:`
-  **User Testing** 🔍 <br>
-  Many steps, decisions and people in the process. I’ve done it in the past, but feel like there’s so much more to learn. This year I’m writing a bachelor thesis on this!
+  **User Research** <br>
+  I've run end-to-end studies, including a bachelor's thesis on usability testing, and I'm deepening my knowledge in this area. 
   <br><br>
-  **Animations** 🎬 <br>
-  Users love MOTION and it is pretty fun to make designs live. I’m not a pro, but played around with Lottie and Rive.
-  <br><br>
-  **3D Graphics** 🪩 <br>
-  Always thought 3D has a high entry threshold, and while I wouldn’t call it easy, Blender is a great tool. I’ve designed an exhibition booth for a company in less then a month!
-  <br><br>
-  **Graphic Design** 📐 <br>
-  Designing for print is a whole new area of expertize but, oh boy! It is so satisfying to see the printed assets ready.
+  **Interaction Design** <br>
+  Users love MOTION and it is pretty fun to make designs communicate this way. I’m not a pro, but played around with Lottie and Rive.
   `, // Markdown is supported
 
   hobbies: `
   Rock Climbing  |  Pottery  |  Baking  |  Photography  |  Digital Art 
   `,
-  
+
+  certifications: [
+    {
+      title: "WCAG Auditing",
+      issuer: "Ministry of Digital Affairs",
+    },
+    {
+      title: "UX-PM Level 1",
+      issuer: "UXalliance",
+    },
+    {
+      title: "English C2 Proficient",
+      issuer: "EF SET",
+    },
+  ],
+
   connect: {
     description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
   links: socialLinks,
@@ -126,33 +125,61 @@ export const projectsPageContent: ProjectPageContent = {
     image: identity.logo,
   },
   projects: [
-    {
-      title: "My Portfolio Website",
-      description: "My first portfolio was on Webflow, but I didn't feel like paying for more pages. I built this website using Astro and hosted on GitHub.",
-      image: "/portfolio.png",
-      year: "November 2025",
-      url: "https://axinlab.github.io",
-    },
-    {
-      title: "PixiEditor Website",
-      description: "I redesigned PixiEditor's website for a major release, prepared the videos and content. I worked in Figma and collaborated with devs during implementation.",
-      image: "/pixieditor.png",
-      year: "June 2025",
-      url: "https://pixieditor.net",
-    },
-    {
-      title: "Mubu - Your Wellness Buddy",
-      description: "Mubu is a gamified wellness app that helps users manage emotional well-being through quick, accessible activities like journaling, breathing, and mood tracking.",
-      image: "/mubu.png",
-      year: "October 2024",
-      url: "https://www.behance.net/gallery/209318155/Mubu-your-wellness-buddy",
+    // {
+    //   title: "Linked Accounts Redesign",
+    //   description: "Redesigned the linked accounts flow. **Onboarding time went from hours to minutes.**",
+    //   image: "/portfolio.png",
+    //   year: "2026",
+    //   url: "/projects/linked-accounts",
+    // },
+    // {
+    //   title: "Loading Group of Products",
+    //   description: "Changed the  product-group loading from recall to recognition to reduce user effort.",
+    //   image: "/portfolio.png",
+    //   year: "2026",
+    //   url: "/projects/loading-group",
+    // },
+    // {
+    //   title: "Edge Cases Workshop",
+    //   description: "Facilited a cross-functional workshop to surface and resolve product edge cases.",
+    //   image: "/portfolio.png",
+    //   year: "2026",
+    //   url: "/projects/edge-cases-workshop",
+    // },
+    // {
+    //   title: "PixiEditor Extension Store",
+    //   description: "Designed a discoverable marketplace for PixiEditor extensions.",
+    //   image: "/portfolio.png",
+    //   year: "2026",
+    //   url: "/projects/pixieditor-extension-store",
+    // },
+    // {
+    //   title: "PixiEditor Website",
+    //   description: "Drove a major release launch for an editor with 200k+ users. Shipped it in direct collaboration with the engineering team.",
+    //   image: "/pixieditor.png",
+    //   year: "2025",
+    //   url: "/projects/pixieditor-website",
+    // },
+    // {
+    //   title: "Ratusz24",
+    //   description: "1st place at a design competition. Designed an online service that lets users handle administrative matters online.",
+    //   image: "/portfolio.png",
+    //   year: "2025",
+    //   url: "/projects/rekord24",
+    // },
+        {
+      title: "Humi",
+      description: "3rd place on local hackaton. Designed an AI-powered meeting assistant, creating the product experience and animated visual assets in Figma and Lottie",
+      image: "/humi_thumbnail.png",
+      year: "2025",
+      url: "/projects/humi",
     },
     {
       title: "Apteczka na Szlaku",
-      description: "Apteczka na Szlaku is a Polish initiative supporting hikers with First Aid Kits. I designed an app aimed at reducing theft and tracking kit usage across hiking trails.",
-      image: "/apteczka.png",
-      year: "September 2024",
-      url: "https://www.behance.net/gallery/208489389/Apteczka-na-Szlaku",
+      description: "3rd place on local hackaton. Designed for a real Polish mountain-safety initiative. I delivered the full UX from brief to prototype in 24 hours.",
+      image: "/apetczka_thumbnail.png",
+      year: "2024",
+      url: "/projects/apteczka",
     },
   ],
 };
@@ -164,5 +191,4 @@ export const blogPageContent: BlogPageContent = {
     description: "Thoughts, stories and ideas.",
     image: identity.logo,
   },
-  subtitle: "Thoughts, stories and ideas.",
-};
+  subtitle: "Thoughts, stories and ideas.",};

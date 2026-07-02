@@ -1,0 +1,31 @@
+<!DOCTYPE html><script type="module">const e=document.getElementById("link-menu-button"),n=document.getElementById("link-menu"),i=document.getElementById("open-indicator");e.addEventListener("click",()=>{n.classList.contains("opacity-0")?(n.classList.remove("pointer-events-none"),n.classList.remove("opacity-0"),i.innerText="-"):(n.classList.add("pointer-events-none"),n.classList.add("opacity-0"),i.innerText="+")});document.addEventListener("click",t=>{const s=t.target===e||e.contains(t.target),c=t.target===n||n.contains(t.target);!s&&!c&&(n.classList.add("pointer-events-none"),n.classList.add("opacity-0"),i.innerText="+")});</script> <html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.15.7"><title>Can you read that font?</title><meta name="description" content="A simple guide for fonts in WCAG"><meta property="og:title" content="Can you read that font?"><meta property="og:description" content="A simple guide for fonts in WCAG"><meta property="og:image" content="/fonts.png"><link rel="stylesheet" href="/_astro/about.NsRVE7sx.css"></head> <body> <header> <div class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-center"> <nav> <ul class="hidden sm:flex sm:items-center sm:gap-2"> <li> <a class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all" href="/" target="_self"> Home </a> </li><li> <a class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all" href="/about" target="_self"> About </a> </li><li> <a class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all" href="/projects" target="_self"> Projects </a> </li> </ul> <div class="relative sm:hidden"> <button id="link-menu-button" class="relative font-medium opacity-60 p-4">Menu <span id="open-indicator">+</span></button> <div id="link-menu" class="absolute p-2 right-0 bg-gray-bg rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"> <ul> <li> <a class="block pl-4 py-3" href="/" target="_self"> Home </a> </li><li> <a class="block pl-4 py-3" href="/about" target="_self"> About </a> </li><li> <a class="block pl-4 py-3" href="/projects" target="_self"> Projects </a> </li> </ul> </div> </div> </nav> </div> </header> <main class="mb-32">  <section class="mt-10 max-w-2xl mx-auto px-6"> <h1 class="font-bold text-3xl mb-4">Can you read that font?</h1> <p class="opacity-60 mb-6"> A simple guide for fonts in WCAG </p> <div class="flex gap-4 mb-6"> <img src="/avatar.png" alt="Anna Kocaj" loading="lazy" decoding="async" fetchpriority="auto" width="40" height="40" class="w-[40px] aspect-square object-cover rounded-full"> <div> <p class="font-medium">Anna Kocaj</p> <p class="opacity-60"> 2/18/2026 · 1 min read </p> </div> </div> <img src="/fonts.png" alt="hand drawing of letter A" loading="lazy" decoding="async" fetchpriority="auto" width="800" height="300" class="apsect-video w-full rounded-xl mb-10"> <article class="prose prose-invert prose-a:text-blue-300 prose-a:underline-offset-4 prose-headings:mb-2 prose-p:text-[#b3b3b3]"> <h2 id="intro">Intro</h2>
+<p>I believe every designer should follow these guidlines for fonts. Sizes, colors and contrasts make all of our lifes easier. I’ll try to explain it in a graphic, easy way. If you’d like to check the official guidelines, here’s a list of what this post is based on:</p>
+<h3 id="criterias-applying-to-fonts-in-wcag-22">Criterias applying to fonts in <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">WCAG 2.2</a></h3>
+<ul>
+<li>1.4.3 &#x26; 1.4.6 Contrast</li>
+<li>1.4.4 Resize Text</li>
+<li>1.4.5 Images of Text</li>
+<li>1.4.8 Visual Presentation</li>
+<li>1.4.9 Images of Text (No Exception)</li>
+<li>1.4.12 Text Spacing</li>
+</ul>
+<h2 id="sizes">Sizes</h2>
+<p>Points, pixels, rem, em, %… there are a lot of units out there. At web desing, we usually use px or rem, but W3C gives us points. So, what to do with that?</p>
+<h3 id="choose-the-right-size">Choose the right size</h3>
+<blockquote>
+<p>At least 18 point or 14 point bold</p>
+</blockquote>
+<p>All right, let’s do some math. To change points to pixels we should <strong>multiply by 1,333</strong> (for standard desktop resolutions 96dpi)</p>
+<p>18pt x 1,333 = 24px</p>
+<p>14pt x 1,333 =</p>
+<p>big text / normal text
+points into pixels</p>
+<h3 id="let-users-make-it-big">Let users make it BIG</h3>
+<p>resizing</p>
+<h3 id="text-spacing">Text Spacing</h3>
+<p>Text Spacing Editor - tool</p>
+<h2 id="colors">Colors</h2>
+<h3 id="make-the-contrast-work">Make the contrast work</h3>
+<h3 id="what-if-background-changes">What if background changes?</h3>
+<p>opacity background
+how to measure on videos? take the least contrast pixel from the video</p> </article> </section>  </main> <footer></footer> </body></html>

@@ -45,11 +45,17 @@ export type ResumeItem = {
   date: string;
 };
 
+export type Certification = {
+  title: string;
+  issuer: string;
+};
+
 export type AboutPageContent = {
   seo: SEOInfo;
   superpowers: string;
   learning: string;
   hobbies: string;
+  certifications: Certification[];
   connect: {
     description: string;
     links: SocialLink[];

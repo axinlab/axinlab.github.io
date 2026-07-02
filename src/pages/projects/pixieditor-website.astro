@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+
+const seo = {
+  title: "PixiEditor Website | Anna Kocaj",
+  description:
+    "How I drove the launch of the PixiEditor 2.0 website — content strategy, video production, and Figma design for an editor with 200k+ users.",
+  image: "/pixieditor.png",
+};
+---
+
+<Layout seo={seo}>
+  <!-- HERO -->
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-1 opacity-50 hover:opacity-100 transition-opacity text-sm mb-8"
+    >
+      ← Back to projects
+    </a>
+
+    <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
+      Case Study · June 2025
+    </p>
+    <h1 class="font-bold text-3xl mb-4 leading-snug">
+      PixiEditor Website — 2.0 Release
+    </h1>
+    <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
+      Driving a major release launch for an editor with <strong
+        >200k+ users</strong
+      > — content strategy, video production, and Figma design, shipped with
+      the engineering team.
+    </p>
+
+    <!-- Overview grid -->
+    <div
+      class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
+    >
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Role</p>
+        <p class="text-sm font-medium">Product Designer, Co-founder</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Timeline
+        </p>
+        <p class="text-sm font-medium">June 2025</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Team</p>
+        <p class="text-sm font-medium">Engineering</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Tools</p>
+        <p class="text-sm font-medium">Figma, Video</p>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="rounded-xl overflow-hidden mb-16 bg-gray-800">
+      <Image
+        src="/pixieditor.png"
+        alt="PixiEditor website"
+        width={1200}
+        height={675}
+        class="w-full object-cover"
+      />
+      <p class="text-xs opacity-30 text-center py-2">
+        Placeholder — replace with final site screenshot
+      </p>
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
+    <div
+      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
+    >
+      📌 <em>Placeholder: Describe the 2.0 release goals and constraints for the site redesign</em>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-8">Process</h2>
+    <div
+      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
+    >
+      📌 <em>Placeholder: Add content strategy, video production, and design steps</em>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
+    <div
+      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
+    >
+      📌 <em>Placeholder: Add launch metrics or user feedback</em>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <section
+    class="max-w-2xl mx-auto px-6 mb-16 flex justify-between items-center border-t border-white/10 pt-8"
+  >
+    <a
+      href="/projects/edge-cases-workshop"
+      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+    >
+      ← Edge Cases Workshop
+    </a>
+    <a
+      href="/projects/pixieditor-extension-store"
+      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+    >
+      Next: PixiEditor Extension Store →
+    </a>
+  </section>
+</Layout>
+
+<style>
+  strong {
+    color: white;
+    font-weight: 600;
+  }
+  em {
+    color: inherit;
+  }
+</style>

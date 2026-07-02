@@ -1,0 +1,223 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+
+const seo = {
+  title: "Apteczka na Szlaku | Anna Kocaj",
+  description:
+    "How I designed an app for a real Polish mountain-safety initiative — digitising trailside First Aid Kits to reduce theft and track usage — placing 3rd in a local hackathon.",
+  image: "/apetczka_thumbnail.png",
+};
+---
+
+<Layout seo={seo}>
+  <!-- HERO -->
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-1 opacity-50 hover:opacity-100 transition-opacity text-sm mb-8"
+    >
+      ← Back to projects
+    </a>
+
+    <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
+      Case Study · HACKBB 2024
+    </p>
+    <h1 class="font-bold text-3xl mb-4 leading-snug">Apteczka na Szlaku</h1>
+    <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
+      During a local hackathon in Bielsko-Biała, I designed a solution for
+      Apteczka na Szlaku, a Polish initiative supporting hikers with First Aid
+      Kits.
+    </p>
+
+    <!-- Overview grid -->
+    <div
+      class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
+    >
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">My Role</p>
+        <p class="text-sm font-medium">Product Designer</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Timeline
+        </p>
+        <p class="text-sm font-medium">24 hours</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Client</p>
+        <p class="text-sm font-medium">Non-profit organization</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Tools</p>
+        <p class="text-sm font-medium">Figma, Adobe Illustrator, Lottie</p>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+      <Image
+        src="/apetczka_thumbnail.png"
+        alt="Apteczka na Szlaku app screens"
+        width={1200}
+        height={675}
+        class="w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
+    <p class="opacity-70 leading-relaxed mb-4">
+      Apteczka na Szlaku faced theft issues with their First Aid Kits, and
+      needed a system to prevent theft and track usage.
+    </p>
+    <p class="opacity-70 leading-relaxed">
+      The design challenge was to serve two audiences simultaneously: <strong
+        >hikers in distress</strong
+      > who need to find and use a kit quickly, and <strong
+        >trail administrators</strong
+      > who need to monitor and manage kit inventory across many locations.
+    </p>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-8">Process</h2>
+
+    <div class="space-y-12">
+      <!-- Step 1 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          01 — Define
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Two different personas, one product
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          The core design tension was that a hiker in an emergency needs a
+          simple solution with no login and no learning curve. An administrator
+          needs the data, and control. I started by writing down both personas
+          needs.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          02 — Concept
+        </p>
+        <h3 class="font-medium text-base mb-3">Choosing the best solution</h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          Our team developed a simple yet effective mobile app solution that
+          integrates NFC technology.
+          <br />The key features of our solution include:
+          <br /><strong>NFC Unlocking:</strong> Users scan their phone to unlock kits
+          <br /><strong>Manual Access:</strong> A keypad option for users without
+          phones <br /><strong>Usage Tracking:</strong>
+          Users report taken items via the app <br /><strong>Navigation:</strong
+          > Both AR and standard map navigation to locate kits
+        </p>
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/apetczka_idea.png"
+            alt="Apteczka na Szlaku idea"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          03 — Design & Prototype
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          From brief to prototype in a few hours
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          I designed the interface and prototype in Figma. Accessibility was a
+          priority: the hiker flow needed to work in stressful outdoor
+          conditions, so I used high-contrast components, large touch targets,
+          and minimal cognitive load.
+        </p>
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/apteczka_mockups.png"
+            alt="Apteczka na Szlaku mockups"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- OUTCOMES -->
+    <section class="max-w-2xl mx-auto px-6 mb-16">
+      <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-3xl font-bold mb-1">🏆 3rd</p>
+          <p class="text-sm opacity-60">place in a local hackathon</p>
+        </div>
+        <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-3xl font-bold mb-1">🤝 Real</p>
+          <p class="text-sm opacity-60">brief from a non-profit organization</p>
+        </div>
+        <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-3xl font-bold mb-1">👥 2</p>
+          <p class="text-sm opacity-60">
+            user personas needs served in one product
+          </p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden bg-gray-800">
+        <Image
+          src="/public/IMG_5433.jpg"
+          alt="Apteczka na Szlaku mockups"
+          width={1200}
+          height={675}
+          class="w-full object-cover"
+        />
+      </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <section
+      class="max-w-2xl mx-auto px-6 mb-16 flex justify-between items-center border-t border-white/10 pt-8"
+    >
+      <a
+        href="/projects/mubu"
+        class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+      >
+        ← Mubu
+      </a>
+      <a
+        href="/projects/humi"
+        class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+      >
+        Next: Humi →
+      </a>
+    </section>
+  </section>
+
+  <style>
+    strong {
+      color: white;
+      font-weight: 600;
+    }
+    em {
+      color: inherit;
+    }
+  </style>
+</Layout>

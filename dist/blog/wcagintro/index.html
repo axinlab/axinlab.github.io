@@ -1,0 +1,35 @@
+<!DOCTYPE html><script type="module">const e=document.getElementById("link-menu-button"),n=document.getElementById("link-menu"),i=document.getElementById("open-indicator");e.addEventListener("click",()=>{n.classList.contains("opacity-0")?(n.classList.remove("pointer-events-none"),n.classList.remove("opacity-0"),i.innerText="-"):(n.classList.add("pointer-events-none"),n.classList.add("opacity-0"),i.innerText="+")});document.addEventListener("click",t=>{const s=t.target===e||e.contains(t.target),c=t.target===n||n.contains(t.target);!s&&!c&&(n.classList.add("pointer-events-none"),n.classList.add("opacity-0"),i.innerText="+")});</script> <html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.15.7"><title>WCAG in a nutshell</title><meta name="description" content="Let's dive into the Web Content Accessibility Guidelines"><meta property="og:title" content="WCAG in a nutshell"><meta property="og:description" content="Let's dive into the Web Content Accessibility Guidelines"><meta property="og:image" content="/nutshell.png"><link rel="stylesheet" href="/_astro/about.NsRVE7sx.css"></head> <body> <header> <div class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-center"> <nav> <ul class="hidden sm:flex sm:items-center sm:gap-2"> <li> <a class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all" href="/" target="_self"> Home </a> </li><li> <a class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all" href="/about" target="_self"> About </a> </li><li> <a class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all" href="/projects" target="_self"> Projects </a> </li> </ul> <div class="relative sm:hidden"> <button id="link-menu-button" class="relative font-medium opacity-60 p-4">Menu <span id="open-indicator">+</span></button> <div id="link-menu" class="absolute p-2 right-0 bg-gray-bg rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"> <ul> <li> <a class="block pl-4 py-3" href="/" target="_self"> Home </a> </li><li> <a class="block pl-4 py-3" href="/about" target="_self"> About </a> </li><li> <a class="block pl-4 py-3" href="/projects" target="_self"> Projects </a> </li> </ul> </div> </div> </nav> </div> </header> <main class="mb-32">  <section class="mt-10 max-w-2xl mx-auto px-6"> <h1 class="font-bold text-3xl mb-4">WCAG in a nutshell</h1> <p class="opacity-60 mb-6"> Let&#39;s dive into the Web Content Accessibility Guidelines </p> <div class="flex gap-4 mb-6"> <img src="/avatar.png" alt="Anna Kocaj" loading="lazy" decoding="async" fetchpriority="auto" width="40" height="40" class="w-[40px] aspect-square object-cover rounded-full"> <div> <p class="font-medium">Anna Kocaj</p> <p class="opacity-60"> 2/17/2026 · 2 min read </p> </div> </div> <img src="/nutshell.png" alt="a hand drawing of nutshell and letters WCAG" loading="lazy" decoding="async" fetchpriority="auto" width="800" height="300" class="apsect-video w-full rounded-xl mb-10"> <article class="prose prose-invert prose-a:text-blue-300 prose-a:underline-offset-4 prose-headings:mb-2 prose-p:text-[#b3b3b3]"> <h1 id="why-should-i-care">Why should I care?</h1>
+<p>You could say, you do not target your products at people with disabilities. But studies shows that 1 in 6 of us expirience significant disability <a href="#references">[1]</a>. Even those of us with perfect health might find some online information hard to access. So, why not make our lives easier?</p>
+<h1 id="web-content-accessibility-guidelines">Web Content Accessibility Guidelines</h1>
+<h2 id="the-www-stardards">The WWW stardards</h2>
+<p>Did you hear about W3C? It is a non-profit organization that develops internet standards like HTML or CCS. Their mission is “Making the web work — for everyone.” <a href="#references">[2]</a> To provide developers and designers with a guide to create better websites, they came up with first WCAG in 1999!</p>
+<h2 id="wcag-versions">WCAG versions</h2>
+<p>WCAG 2.0 was a major update in 2008 that introduced the 4 main principles as we know it now. Later in 2018 it was expanded to cover mobile device needs in version 2.1. The lastest update, WCAG 2.2 in 2023, is a base to many directives all around the world. At the moment W3C is working on WCAG 3.0 that is promised to be an easier to understand and more flexible guide.</p>
+<h2 id="pour-principles">POUR principles</h2>
+<p>WCAG is based on 4 words:</p>
+<ul>
+<li>Perceivable</li>
+<li>Operable</li>
+<li>Understandable</li>
+<li>Robust</li>
+</ul>
+<p>Each word represents a different principle. All of them feature 87 success criteria with 3 levels: A, AA and AAA.</p>
+<h2 id="where-to-find-the-latest-wcag">Where to find the latest WCAG?</h2>
+<p>It is best to use <a href="https://www.w3.org/TR/WCAG21/">the official W3C website.</a>
+What is nice to know, WCAG is translated to many languages.</p>
+<h2 id="wcag-equivalentsinterpretations-across-the-world">WCAG equivalents/interpretations across the world</h2>
+<p>Getting familiar with other guides than WCAG is a good way of undertanding the problems better:</p>
+<ul>
+<li>French <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/">RGAA (Référentiel général d’amélioration de l’accessibilité)</a></li>
+<li>German <a href="https://www.gesetze-im-internet.de/bitv_2_0/index.html">BITV (Barrierefreie-Informationstechnik-Verordnung)</a></li>
+<li>American <a href="https://www.section508.gov/manage/laws-and-policies/section-508-law/">Section 508</a></li>
+</ul>
+<hr>
+<p>As a designer I feel responsible for making web more accessible. Aside from the legal point of view, I’ve seen many people struggle interacting with content online. Making their life a bit easier feels like a good purpose for my career.</p>
+<p>In the next posts I’m going to share my tips for following WCAG rules, as it is my current learning focus.</p>
+<hr>
+<h3 id="references">References</h3>
+<ol>
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/disability-and-health">https://www.who.int/news-room/fact-sheets/detail/disability-and-health</a></li>
+<li><a href="https://www.w3.org/mission/">https://www.w3.org/mission/</a></li>
+</ol> </article> </section>  </main> <footer></footer> </body></html>

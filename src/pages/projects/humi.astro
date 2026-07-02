@@ -1,0 +1,205 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+
+const seo = {
+  title: "Humi | Anna Kocaj",
+  description:
+    "Humi is an AI-powered meeting assistant that helps leaders read their team's emotions in real time.",
+  image: "/humi_thumbnail.png",
+};
+---
+
+<Layout seo={seo}>
+  <!-- HERO -->
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-1 opacity-50 hover:opacity-100 transition-opacity text-sm mb-8"
+    >
+      ← Back to projects
+    </a>
+
+    <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
+      Case Study · HackBB 2025
+    </p>
+    <h1 class="font-bold text-3xl mb-4 leading-snug">
+      Humi - an AI meeting assistant that reads the room
+    </h1>
+    <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
+      Hi, I'm Humi. I help leaders read their team's emotions and run meetings
+      so that everyone feels heard.
+    </p>
+
+    <!-- Overview grid -->
+    <div
+      class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
+    >
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">My Role</p>
+        <p class="text-sm font-medium">Product Designer</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Timeline
+        </p>
+        <p class="text-sm font-medium">24 hours</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Design Tools
+        </p>
+        <p class="text-sm font-medium">Figma, Lottie</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Tech Stack
+        </p>
+        <p class="text-sm font-medium">Python, Avalonia UI (.NET), Llama 3.2</p>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+      <!-- TODO: replace with a real screenshot of the Humi desktop app -->
+      <Image
+        src="/humi_thumbnail.png"
+        alt="Humi desktop app showing the real-time emotion widget"
+        width={1200}
+        height={675}
+        class="w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
+    <p class="opacity-70 leading-relaxed mb-4">
+      Leaders consistently name communication as one of the hardest parts of the
+      job. A struggle that gets worse in remote and online meetings, where tone
+      of voice and body language are the first things lost.
+    </p>
+    <p class="opacity-70 leading-relaxed">
+      The design challenge was to give leaders a way to <strong
+        >read how their team is actually feeling</strong
+      > in the moment.
+    </p>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="max-w-2xl mx-auto px-6 mb-16">
+    <h2 class="font-semibold text-xl mb-8">Process</h2>
+
+    <div class="space-y-12">
+      <!-- Step 1 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          01 — Define
+        </p>
+        <h3 class="font-medium text-base mb-3">Helpful, not intrusive</h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          The core design tension: leaders need real-time emotional insight to
+          run better meetings, but nothing about the product could feel like it
+          was watching or judging the team. From keeping the experience local and
+          login-free, to giving Humi a warm, character-driven personality rather
+          than a dashboard feel.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          02 — Concept
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          From facial data to a leader's summary
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          We built Humi around a model trained on FER-2013, a research dataset
+          behind a paper published at the International Conference on Machine
+          Learning (ICML) — 35,000 images labelled across 7 emotions (anger,
+          happiness, neutral, sadness, surprise, fear, and disgust). On top of
+          that, the product had two core features:
+        </p>
+        <ul
+          class="opacity-70 leading-relaxed text-sm list-disc pl-5 space-y-1 mb-4"
+        >
+          <li>
+            <strong>Real-time emotion widget</strong> — a lightweight overlay that
+            surfaces how the room is feeling as the meeting happens.
+          </li>
+          <li>
+            <strong>AI meeting assistant</strong> — transcribes the conversation and,
+            powered by Llama 3.2, generates a summary the leader can revisit afterward,
+            alongside a post-meeting view of the team's sentiment and emotion trends.
+          </li>
+        </ul>
+        <!-- TODO: replace with a screenshot of the emotion widget in use -->
+        <div class="rounded-l overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/humi_dashboard.png"
+            alt="Humi's real-time emotion widget"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          03 — Design & Prototype
+        </p>
+        <h3 class="font-medium text-base mb-3">Giving Humi a personality</h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          I designed the interface, the character of Humi, and the
+          end-of-meeting summary experience in Figma, then brought Humi to life
+          with animated visual assets in Lottie — small, expressive moments
+          meant to make an emotion-tracking tool feel encouraging rather than
+          clinical. Privacy shaped the product decisions too: we kept it as a
+          simple desktop app, with no cloud
+          storage and no login required.
+        </p>
+        <!-- TODO: replace with a screenshot of the Figma/Lottie assets or final prototype -->
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/humi_faces.png"
+            alt="Humi app mockups and character design"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+  <!-- NAVIGATION -->
+  <section
+    class="max-w-2xl mx-auto px-6 mb-16 flex justify-center items-center border-t border-white/10 pt-8"
+  >
+    <a
+      href="/projects"
+      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+    >
+      ← All projects
+    </a>
+  </section>
+</Layout>
+
+<style>
+  strong {
+    color: white;
+    font-weight: 600;
+  }
+  em {
+    color: inherit;
+  }
+</style>
