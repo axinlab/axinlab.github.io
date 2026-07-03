@@ -12,6 +12,67 @@ const { seo } = Astro.props;
 ---
 
 <script>
+  const cursorDot = document.getElementById("cursor-dot") as HTMLDivElement;
+  const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+
+  if (cursorDot && isFinePointer) {
+    document.documentElement.classList.add("has-custom-cursor");
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let dotX = 0;
+    let dotY = 0;
+
+    document.addEventListener("mousemove", (event) => {
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+      cursorDot.style.opacity = "1";
+    });
+
+    document.addEventListener("mouseleave", () => {
+      cursorDot.style.opacity = "0";
+    });
+
+    const interactiveSelector = "a, button, input, textarea, .cursor-grow";
+
+    document.addEventListener("mouseover", (event) => {
+      const target = event.target as HTMLElement;
+      if (target.closest(interactiveSelector)) {
+        cursorDot.classList.add("cursor-dot--active");
+      }
+    });
+    document.addEventListener("mouseout", (event) => {
+      const target = event.target as HTMLElement;
+      if (target.closest(interactiveSelector)) {
+        cursorDot.classList.remove("cursor-dot--active");
+      }
+    });
+
+    const render = () => {
+      dotX += (mouseX - dotX) * 0.2;
+      dotY += (mouseY - dotY) * 0.2;
+      cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
+      requestAnimationFrame(render);
+    };
+    requestAnimationFrame(render);
+  }
+
+  const revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal--visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach((el) => observer.observe(el));
+  }
+
   const linkMenuButton = document.getElementById(
     "link-menu-button"
   ) as HTMLButtonElement;
@@ -60,6 +121,7 @@ const { seo } = Astro.props;
     <meta property="og:image" content={seo.image} />
   </head>
   <body>
+    <div id="cursor-dot" aria-hidden="true"></div>
     <header>
       <div
         class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-center"
@@ -70,7 +132,7 @@ const { seo } = Astro.props;
               navBarLinks.map((link) => (
                 <li>
                   <a
-                    class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
+                    class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 hover:text-accent transition-all duration-300"
                     href={link.url}
                     target={link.external ? "_blank" : "_self"}
                   >
@@ -120,6 +182,10 @@ const { seo } = Astro.props;
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+  :root {
+    --accent: #fbc02d;
+  }
+
   html {
     font-family: "Outfit", sans-serif;
     background: #171717;
@@ -131,6 +197,11 @@ const { seo } = Astro.props;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     color: white;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #171717;
   }
 
   code {
@@ -152,6 +223,60 @@ const { seo } = Astro.props;
   }
 
   .post:hover .hover-underline {
-    text-decoration-color: rgba(255, 255, 255, 1);
+    text-decoration-color: var(--accent);
+  }
+
+  /* Custom cursor */
+  #cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition:
+      width 200ms ease,
+      height 200ms ease,
+      opacity 200ms ease,
+      background 200ms ease;
+    will-change: transform;
+  }
+
+  #cursor-dot.cursor-dot--active {
+    width: 32px;
+    height: 32px;
+    background: rgba(251, 192, 45, 0.25);
+    border: 1.5px solid var(--accent);
+  }
+
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 700ms ease,
+      transform 700ms ease;
+  }
+
+  .reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 </style>

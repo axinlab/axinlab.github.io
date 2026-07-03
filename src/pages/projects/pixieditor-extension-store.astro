@@ -3,10 +3,9 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 
 const seo = {
-  title: "PixiEditor Extension Store | Anna Kocaj",
-  description:
-    "Case study placeholder: designing a discoverable marketplace for community-built PixiEditor extensions.",
-  image: "/portfolio.png",
+  title: "PixiEditor Extensions | Anna Kocaj",
+  description: "Fixing extension discoverability and trust for PixiEditor grew paid extension sales ~7.8x in 25 days.",
+  image: "/extension_thumbnail.png",
 };
 ---
 
@@ -20,14 +19,16 @@ const seo = {
       ← Back to projects
     </a>
 
+    <!-- TODO: confirm exact ship date for the improvements (used May 2026 based on the 25-day window from Apr 18) -->
     <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
-      Case Study
+      Case Study · 2026
     </p>
     <h1 class="font-bold text-3xl mb-4 leading-snug">
-      PixiEditor Extension Store
+      Fixing Extension Discoverability at PixiEditor
     </h1>
     <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
-      Designing a discoverable marketplace for community-built PixiEditor extensions.
+      Paid extension sales grew ~7.8x in 25 days after solving a
+      discoverability problem.
     </p>
 
     <!-- Overview grid -->
@@ -35,85 +36,223 @@ const seo = {
       class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
     >
       <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Role</p>
-        <p class="text-sm font-medium">Product Designer, Co-founder</p>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          My Role
+        </p>
+        <p class="text-sm font-medium">
+          Product Designer
+        </p>
       </div>
       <div>
         <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
           Timeline
         </p>
-        <p class="text-sm font-medium">TBD</p>
-      </div>
-      <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Team</p>
-        <p class="text-sm font-medium">Engineering</p>
+        <p class="text-sm font-medium">25 days</p>
       </div>
       <div>
         <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Tools</p>
-        <p class="text-sm font-medium">Figma</p>
+        <p class="text-sm font-medium">Figma, Miro</p>
       </div>
     </div>
 
     <!-- Hero image -->
-    <div class="rounded-xl overflow-hidden mb-16 bg-gray-800">
+    <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+      <!-- TODO: replace with a real screenshot of the redesigned extension window -->
       <Image
-        src="/portfolio.png"
-        alt="PixiEditor Extension Store placeholder"
+        src="/extension_thumbnail.png"
+        alt="PixiEditor's redesigned extension browser"
         width={1200}
         height={675}
         class="w-full object-cover"
       />
-      <p class="text-xs opacity-30 text-center py-2">
-        Placeholder — replace with actual product screenshot
-      </p>
     </div>
   </section>
 
   <!-- CHALLENGE -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Describe the discoverability problem for extensions</em>
-    </div>
+    <p class="opacity-70 leading-relaxed mb-4">
+      PixiEditor is a free, open-source 2D graphics editor that depends on
+      its community for funding. A Founders Bundle had brought in about 500
+      buyers over the past year, so to grow that further we started building
+      paid extensions aimed at our core users: game developers and pixel
+      artists.
+    </p>
+    <p class="opacity-70 leading-relaxed mb-4">
+      We shipped version 2.1 with a new extension browser: seven
+      extensions, priced 25–124 PLN, accessible from <em
+        >View &gt; Open Extensions Window</em
+      >. We hadn't done any marketing yet, planning to
+      market it properly once the feature had settled.
+    </p>
+    <p class="opacity-70 leading-relaxed">
+      In the first 25 days after launch (Apr 18 – May 13), we sold <strong
+        >13 extensions</strong
+      >. Before spending any marketing effort, we needed to know:
+      was this a marketing problem, or was something wrong with the
+      product itself?
+    </p>
   </section>
 
   <!-- PROCESS -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-8">Process</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add research, design, and iteration steps</em>
-    </div>
-  </section>
 
-  <!-- OUTCOMES -->
-  <section class="max-w-2xl mx-auto px-6 mb-16">
-    <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add adoption metrics or extension submission stats</em>
+    <div class="space-y-12">
+      <!-- Step 1 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          01 — Research
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Listening before marketing
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          Instead of promoting the extensions as-is, I gathered feedback
+          from our community and grouped what came back into three distinct problems:
+        </p>
+        <ul class="opacity-70 leading-relaxed text-sm list-disc pl-5 space-y-2">
+          <li>
+            <strong>Discoverability</strong> the extension browser was
+            tucked inside a submenu (<em>View &gt; Extensions</em>) and a
+            small startup-window icon. Most software with a plugin
+            ecosystem puts this front and center in the topbar; ours was
+            effectively hidden.
+          </li>
+          <li>
+            <strong>Trust & clarity</strong> people couldn't tell if the
+            extensions were official or community-made, and the word
+            "workspace" led some users to assume it was just a custom
+            view, not additional paid functionality. Combined with
+            PixiEditor being free and relatively young, that ambiguity made
+            people hesitant to pay for something they didn't fully
+            understand.
+          </li>
+          <li>
+            <strong>Product readiness</strong> a smaller group of users
+            were waiting on core features still on our roadmap, and didn't
+            feel ready to spend money until those shipped. This was a real
+            signal, but a separate problem from discoverability and trust.
+            One we chose not to try to solve with this redesign.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Step 2 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          02 — Prioritize
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Fix the entry point before spending on marketing
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          Marketing a feature that people can't find or don't trust would
+          have wasted the effort and risked making the trust problem
+          worse by sending more traffic to a confusing experience. So we
+          committed to fixing discoverability and clarity first, and
+          holding off on any marketing push until that was live. That
+          meant three concrete changes: replace the unclear icon with a
+          puzzle piece (the convention users already recognize from other
+          software), redesign the extension window to read as trustworthy
+          and clearly explained, and surface extensions during onboarding
+          instead of leaving them to be found by chance.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          03 — Design & Ship
+        </p>
+        <h3 class="font-medium text-base mb-3">Three small fixes, shipped together</h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          I redesigned the icon as a puzzle piece so it reads instantly as
+          "extensions"
+        </p>
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/extension_icon.png"
+            alt="PixiEditor extensions icon, before and after"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          I reworked the extension window's layout and copy to make the value of each
+          extension clear and the design more polished.
+        </p>
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/extension_redesign.png"
+            alt="PixiEditor's redesigned extension browser window"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          I also added a few extensions to our onboarding flow so every new user encounters it early.
+        </p>
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/extension_onboarding.png"
+            alt="Extensions introduced during PixiEditor onboarding"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
     </div>
+
+    <!-- OUTCOMES -->
+    <section class="max-w-2xl mx-auto px-6 mb-16">
+      <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-3xl font-bold mb-1">13 sales</p>
+          <p class="text-sm opacity-60">in the 25 days before the redesign</p>
+        </div>
+        <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-3xl font-bold mb-1">102 sales</p>
+          <p class="text-sm opacity-60">in the 25 days after it shipped</p>
+        </div>
+      <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+        <p class="text-3xl font-bold mb-1">~7.8x</p>
+        <p class="text-sm opacity-60">
+          more extension sales thanks to the redesign
+        </p>
+      </div>
+      </div>
+      <div class="rounded-xl overflow-hidden m-6 bg-gray-800 p-6">
+        <p class="text-sm opacity-80 italic">
+          "I like the new placement for the extensions. It's easier to see,
+          especially because of the colour."
+        </p>
+        <p class="text-xs opacity-40 mt-2">
+          — user feedback after the redesign shipped
+        </p>
+      </div>
+    </section>
   </section>
 
   <!-- NAVIGATION -->
   <section
-    class="max-w-2xl mx-auto px-6 mb-16 flex justify-between items-center border-t border-white/10 pt-8"
+    class="max-w-2xl mx-auto px-6 mb-16 flex justify-center items-center border-t border-white/10 pt-8"
   >
     <a
-      href="/projects/pixieditor-website"
+      href="/projects"
       class="opacity-50 hover:opacity-100 transition-opacity text-sm"
     >
-      ← PixiEditor Website
-    </a>
-    <a
-      href="/projects/rekord24"
-      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
-    >
-      Next: Rekord24 →
+      ← All projects
     </a>
   </section>
 </Layout>

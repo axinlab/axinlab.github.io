@@ -14,7 +14,7 @@ const isExternal = url.startsWith("http")
 <a
   href={url}
   target={isExternal ? "_blank" : "_self"}
-  class="sm:py-5 py-10 flex flex-col sm:flex-row gap-6 group-hover:opacity-60 hover:!opacity-100 transition-opacity"
+  class="group/card sm:py-5 py-10 px-4 -mx-4 rounded-xl flex flex-col sm:flex-row gap-6 transition-all duration-300 hover:bg-white/[0.04] hover:scale-[1.01]"
 >
   <div class="h-full bg-gray-700 rounded-lg aspect-video sm:h-[150px]">
     <Image
@@ -27,7 +27,9 @@ const isExternal = url.startsWith("http")
   </div>
   <div>
     <div class="flex items-center gap-1 mb-2">
-      <h2 class="font-medium">{title}</h2>
+      <h2 class="font-medium transition-colors duration-300 group-hover/card:text-accent">
+        {title}
+      </h2>
       <span class="opacity-60">· {year}</span>
     </div>
     <div class="opacity-60">

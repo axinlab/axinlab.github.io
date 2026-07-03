@@ -13,55 +13,65 @@ const connectDescription = marked.parse(aboutPageContent.connect.description)
 ---
 
 <Layout seo={aboutPageContent.seo}>
-  <section class="mt-10 max-w-2xl mx-auto px-6">
-    <h1 class="font-bold text-3xl">About</h1>
+  <section class="reveal mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="font-bold text-3xl mb-1">
+      About<span class="text-accent">.</span>
+    </h1>
   </section>
 
-  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
-    <h2 class="mb-4 opacity-60 text-xl">My Superpowers</h2>
-      <div class="mb-6">
-        <Fragment set:html={superpowers} />
-      </div>
+  <section class="max-w-2xl mx-auto px-6 mt-12">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
+      Soft Skills
+    </h2>
+    <div class="mb-6">
+      <Fragment set:html={superpowers} />
+    </div>
   </section>
 
-  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
-    <h2 class="mb-4 opacity-60 text-xl">Still Learning</h2>
-      <div class="mb-6">
-        <Fragment set:html={learning} />
-      </div>
+  <section class="max-w-2xl mx-auto px-6 mt-12">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
+      Actively Learning
+    </h2>
+    <div class="mb-6">
+      <Fragment set:html={learning} />
+    </div>
   </section>
 
-  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
-    <h2 class="mb-4 opacity-60 text-xl">Certifications</h2>
-      <div class="mb-6">
-        {
-          aboutPageContent.certifications.map((cert) => (
-            <p class="mb-1">
-              <span class="font-medium">{cert.title}</span>
-              <span class="opacity-60"> — {cert.issuer}</span>
-            </p>
-          ))
-        }
-      </div>
+  <section class="max-w-2xl mx-auto px-6 mt-12">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
+      Certifications
+    </h2>
+    <div class="mb-6">
+      {
+        aboutPageContent.certifications.map((cert) => (
+          <p class="mb-1">
+            <span class="font-medium">{cert.title}</span>
+            <span class="opacity-60"> — {cert.issuer}</span>
+          </p>
+        ))
+      }
+    </div>
   </section>
 
-    <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
-    <h2 class="mb-4 opacity-60 text-xl">My Hobbies</h2>
-      <div class="mb-6">
-        <Fragment set:html={hobbies} />
-      </div>
+  <section class="max-w-2xl mx-auto px-6 mt-12">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
+      My Hobbies
+    </h2>
+    <div class="mb-6">
+      <Fragment set:html={hobbies} />
+    </div>
   </section>
 
-  <section class="mt-12 max-w-2xl mx-auto px-6 sm:gap-16">
-    <h2 class="mb-4 opacity-60 text-xl">Contact</h2>
-    <div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 group">
-        {
-          aboutPageContent.connect.links.map((item) => (
-            <SocialLinkBox {...item} />
-          ))
-        }
-      </div>
+  <section class="max-w-2xl mx-auto px-6 mt-12 mb-16">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
+      Contact
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 group">
+      {
+        aboutPageContent.connect.links.map((item) => (
+          <SocialLinkBox {...item} />
+        ))
+      }
     </div>
   </section>
 </Layout>

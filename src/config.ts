@@ -11,7 +11,7 @@ import type {
 export const identity: Identity = {
   name: "Anna Kocaj",
   logo: "/avatar.png",
-  email: "nnakocaj@gmail.com",
+  email: "a.kocaj@pm.me",
 };
 
 export const navBarLinks: NavBarLink[] = [
@@ -38,8 +38,8 @@ export const socialLinks: SocialLink[] = [
     external: true,
   },
   {
-    title: "nnakocaj@gmail.com",
-    url: "mailto:nnakocaj@gmail.com",
+    title: "a.kocaj@pm.me",
+    url: "mailto:a.kocaj@pm.me",
     icon: "mdi:email",
   },
 ];
@@ -146,13 +146,13 @@ export const projectsPageContent: ProjectPageContent = {
     //   year: "2026",
     //   url: "/projects/edge-cases-workshop",
     // },
-    // {
-    //   title: "PixiEditor Extension Store",
-    //   description: "Designed a discoverable marketplace for PixiEditor extensions.",
-    //   image: "/portfolio.png",
-    //   year: "2026",
-    //   url: "/projects/pixieditor-extension-store",
-    // },
+    {
+      title: "Fixing Extension Discoverability",
+      description: "Paid extension sales grew ~7.8x in 25 days after solving a discoverability problem.",
+      image: "/extension_thumbnail.png",
+      year: "2026",
+      url: "/projects/pixieditor-extension-store",
+    },
     // {
     //   title: "PixiEditor Website",
     //   description: "Drove a major release launch for an editor with 200k+ users. Shipped it in direct collaboration with the engineering team.",
@@ -160,13 +160,13 @@ export const projectsPageContent: ProjectPageContent = {
     //   year: "2025",
     //   url: "/projects/pixieditor-website",
     // },
-    // {
-    //   title: "Ratusz24",
-    //   description: "1st place at a design competition. Designed an online service that lets users handle administrative matters online.",
-    //   image: "/portfolio.png",
-    //   year: "2025",
-    //   url: "/projects/rekord24",
-    // },
+    {
+      title: "Ratusz24",
+      description: "1st place at a design competition. Designed an online service that lets users handle administrative matters online.",
+      image: "/ratusz_thumbnail.png",
+      year: "2025",
+      url: "/projects/rekord24",
+    },
         {
       title: "Humi",
       description: "3rd place on local hackaton. Designed an AI-powered meeting assistant, creating the product experience and animated visual assets in Figma and Lottie",

@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import { homePageContent, identity } from "../config";
+import { homePageContent, identity, projectsPageContent } from "../config";
 import SocialLink from "../components/SocialLink.astro";
 import Link from "../components/Link.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
@@ -16,8 +17,10 @@ posts.splice(2)
 ---
 
 <Layout seo={homePageContent.seo}>
-  <section class="mt-10 max-w-2xl mx-auto px-6">
-    <h1 class="font-bold text-3xl mb-1">{identity.name}</h1>
+  <section class="reveal mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="font-bold text-3xl mb-1">
+      {identity.name}<span class="text-accent">.</span>
+    </h1>
     <p class="opacity-60 mb-10">{homePageContent.role}</p>
     <div class="flex flex-col min-[520px]:flex-row gap-6 mb-8">
       <Image
@@ -25,7 +28,7 @@ posts.splice(2)
         alt={identity.name}
         width={100}
         height={100}
-        class="rounded-full"
+        class="rounded-full ring-2 ring-white/10 hover:ring-accent transition-all duration-300 hover:scale-105"
       />
       <div class="group flex flex-col justify-center gap-2 w-fit">
         {
@@ -49,6 +52,31 @@ posts.splice(2)
           <Link text={link.title} href={link.url} external={link.external} />
         ))
       }
+    </div>
+  </section>
+
+  <section class="reveal mt-20 max-w-2xl mx-auto px-6">
+    <h2 class="flex items-center gap-2">
+      Latest projects
+    </h2>
+    <div class="grid grid-cols-1 mb-10">
+      {
+        projectsPageContent.projects.slice(0, 3).map((project) => (
+          <ProjectCard {...project} />
+        ))
+      }
+    </div>
+    <div class="text-center">
+      <a
+        href="/projects"
+        class="group/link inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium opacity-70 hover:opacity-100 hover:border-accent transition-all duration-300"
+        >View all
+        <span
+          aria-hidden="true"
+          class="transition-transform duration-300 group-hover/link:translate-x-0.5"
+          >→</span
+        ></a
+      >
     </div>
   </section>
 

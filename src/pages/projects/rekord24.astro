@@ -5,8 +5,8 @@ import Layout from "../../layouts/Layout.astro";
 const seo = {
   title: "Rekord24 | Anna Kocaj",
   description:
-    "Case study placeholder: designing an app that lets users handle administrative matters online.",
-  image: "/portfolio.png",
+    "Designing an app that lets users handle administrative matters online.",
+  image: "/ratusz_thumbnail.png",
 };
 ---
 
@@ -21,13 +21,24 @@ const seo = {
     </a>
 
     <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
-      Case Study
+      Case Study · 2025
     </p>
-    <h1 class="font-bold text-3xl mb-4 leading-snug">
-      Rekord24
-    </h1>
+    <h1 class="font-bold text-3xl mb-4 leading-snug">Ratusz24</h1>
+    <a
+      href="https://www.figma.com/design/hg6OXZEUo9l93fwVthJW60/Ratusz-24?node-id=70-13130&t=eVXLcJ2WosdDdhgn-1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group/link inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium opacity-70 hover:opacity-100 hover:border-accent transition-all duration-300 mb-4 w-fit"
+    >
+      View in Figma
+      <span
+        aria-hidden="true"
+        class="transition-transform duration-300 group-hover/link:translate-x-0.5"
+        >→</span
+      >
+    </a>
     <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
-      Designing an app that lets users handle administrative matters online.
+      An app that lets users handle administrative matters online.
     </p>
 
     <!-- Overview grid -->
@@ -35,86 +46,182 @@ const seo = {
       class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
     >
       <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Role</p>
-        <p class="text-sm font-medium">TBD</p>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">My Role</p>
+        <p class="text-sm font-medium">Product Designer</p>
       </div>
       <div>
         <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
           Timeline
         </p>
-        <p class="text-sm font-medium">TBD</p>
+        <p class="text-sm font-medium">20 hours</p>
       </div>
       <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Team</p>
-        <p class="text-sm font-medium">TBD</p>
-      </div>
-      <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Tools</p>
-        <p class="text-sm font-medium">TBD</p>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Design Tools
+        </p>
+        <p class="text-sm font-medium">Figma</p>
       </div>
     </div>
 
     <!-- Hero image -->
-    <div class="rounded-xl overflow-hidden mb-16 bg-gray-800">
+    <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
       <Image
-        src="/portfolio.png"
-        alt="Rekord24 placeholder"
+        src="/ratusz_thumbnail.png"
+        alt="Ratusz24 on dekstop and mobile"
         width={1200}
         height={675}
         class="w-full object-cover"
       />
-      <p class="text-xs opacity-30 text-center py-2">
-        Placeholder — replace with actual product screenshot
-      </p>
     </div>
   </section>
 
   <!-- CHALLENGE -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Describe the administrative process this app digitises</em>
-    </div>
+    <p class="opacity-70 leading-relaxed mb-4">
+      Municipal services like car registration or driver's license renewal are
+      essential, but scattered across confusing government sites and buried in
+      bureaucratic language. Most residents don't know which department handles
+      what they need, let alone where to find it online.
+    </p>
+    <p class="opacity-70 leading-relaxed">
+      The challenge was to design a single platform, built for municipalities
+      representing <strong>1.6M residents</strong>, where anyone, regardless of
+      age or comfort with technology, could find and start the right service in
+      minutes.
+    </p>
   </section>
 
   <!-- PROCESS -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-8">Process</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add research, design, and iteration steps</em>
-    </div>
-  </section>
 
-  <!-- OUTCOMES -->
-  <section class="max-w-2xl mx-auto px-6 mb-16">
-    <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add usage or efficiency metrics</em>
-    </div>
-  </section>
+    <div class="space-y-12">
+      <!-- Step 1 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          01 — Define
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Two ways of not knowing what you need
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          Residents fall into two groups: people who know exactly what they're
+          looking for ("driver's license renewal") and people who only know
+          their situation ("I just moved here, what do I need to do?"). A single
+          search bar serves the first group well and fails the second. The
+          platform needed to support both without forcing either one through the
+          other's path.
+        </p>
+      </div>
 
-  <!-- NAVIGATION -->
-  <section
-    class="max-w-2xl mx-auto px-6 mb-16 flex justify-between items-center border-t border-white/10 pt-8"
-  >
-    <a
-      href="/projects/pixieditor-extension-store"
-      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+      <!-- Step 2 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          02 — Concept
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          An intelligent search, and a wizard for everyone else
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          For residents who already know the service name, an intelligent search
+          engine surfaces car registration, driver's license, and other services
+          instantly.
+        </p>
+        <div class="rounded-l overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/ratusz_1.png"
+            alt="Ratusz24 intelligent search"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          For everyone else, a short wizard asks a few plain-language questions
+          about their situation and guides them to the right service.
+        </p>
+        <div class="rounded-l overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/ratusz_3.png"
+            alt="Ratusz24 service wizard"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          03 — Design & Prototype
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Intuitive by default, on any device
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          Because Ratusz24 needed to work for residents of all ages and digital
+          literacy levels, I kept the interface deliberately simple and followed
+          established design conventions rather than reinventing patterns. The full experience was designed
+          responsively.
+        </p>
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/ratusz_2.png"
+            alt="Ratusz24 responsive design across devices"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- OUTCOMES -->
+    <section class="max-w-2xl mx-auto px-6 mb-16">
+      <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-3xl font-bold mb-1">🏆 1st</p>
+          <p class="text-sm opacity-60">place, RekordSI, January 2025</p>
+        </div>
+        <div class="p-5 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-3xl font-bold mb-1">1.6M</p>
+          <p class="text-sm opacity-60">
+            residents representing target audience
+          </p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden bg-gray-800">
+          <Image
+            src="/ratusz_prize.jpeg"
+            alt="Ania getting a prize for winning Ratusz24"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+    </section>
+    
+
+    <!-- NAVIGATION -->
+    <section
+      class="max-w-2xl mx-auto px-6 mb-16 flex justify-center items-center border-t border-white/10 pt-8"
     >
-      ← PixiEditor Extension Store
-    </a>
-    <a
-      href="/projects/mubu"
-      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
-    >
-      Next: Mubu →
-    </a>
+      <a
+        href="/projects"
+        class="opacity-50 hover:opacity-100 transition-opacity text-sm"
+      >
+        ← All projects
+      </a>
+    </section>
   </section>
 </Layout>
 

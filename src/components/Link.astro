@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 interface Props {
   text: string;
   href: string;
@@ -8,26 +7,31 @@ interface Props {
 }
 
 const { text, href, external, noAnchor } = Astro.props;
+
+const pillClass =
+  "group/link inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium opacity-70 group-hover:opacity-40 hover:!opacity-100 hover:border-accent transition-all duration-300";
 ---
 
 {
   !noAnchor ? (
-    <a
-      href={href}
-      target={external ? "_blank" : "_self"}
-      class="flex items-center gap-2 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity"
-    >
-      <div class="rotate-45">
-        <Icon name="mdi:arrow-up" />
-      </div>
+    <a href={href} target={external ? "_blank" : "_self"} class={pillClass}>
       <span>{text}</span>
+      <span
+        aria-hidden="true"
+        class="transition-transform duration-300 group-hover/link:translate-x-0.5"
+      >
+        →
+      </span>
     </a>
   ) : (
-    <div class="flex items-center gap-2 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity">
-      <div class="rotate-45">
-        <Icon name="mdi:arrow-up" />
-      </div>
+    <div class={pillClass}>
       <span>{text}</span>
+      <span
+        aria-hidden="true"
+        class="transition-transform duration-300 group-hover/link:translate-x-0.5"
+      >
+        →
+      </span>
     </div>
   )
 }

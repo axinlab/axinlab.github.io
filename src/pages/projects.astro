@@ -5,9 +5,11 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout seo={projectsPageContent.seo}>
-  <section class="mt-10 max-w-2xl mx-auto px-6">
-    <h1 class="font-bold text-3xl mb-1">Projects</h1>
-    <div class="grid grid-cols-1 group">
+  <section class="reveal mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="font-bold text-3xl mb-1">
+      Projects<span class="text-accent">.</span>
+    </h1>
+    <div class="grid grid-cols-1">
       {
         projectsPageContent.projects.map((project) => (
           <ProjectCard {...project} />
