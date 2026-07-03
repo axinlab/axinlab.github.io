@@ -20,11 +20,11 @@ export const navBarLinks: NavBarLink[] = [
     url: "/",
   },
   {
-    title: "About",
+    title: "About Me",
     url: "/about",
   },
   {
-    title: "Projects",
+    title: "My Work",
     url: "/projects",
   },
 
@@ -59,7 +59,7 @@ export const homePageContent: HomePageContent = {
   links: [
     {
       title: "View My Resume",
-      url: "/resume-02.07.26.pdf",
+      url: "/resume-03.07.26.pdf",
       external: true,
     },
   ],
@@ -125,20 +125,38 @@ export const projectsPageContent: ProjectPageContent = {
     image: identity.logo,
   },
   projects: [
-    // {
-    //   title: "Linked Accounts Redesign",
-    //   description: "Redesigned the linked accounts flow. **Onboarding time went from hours to minutes.**",
-    //   image: "/portfolio.png",
-    //   year: "2026",
-    //   url: "/projects/linked-accounts",
-    // },
-    // {
-    //   title: "Loading Group of Products",
-    //   description: "Changed the  product-group loading from recall to recognition to reduce user effort.",
-    //   image: "/portfolio.png",
-    //   year: "2026",
-    //   url: "/projects/loading-group",
-    // },
+    {
+      title: "Fixing Extension Discoverability",
+      description: "Paid extension sales grew ~7.8x in 25 days after solving a discoverability problem.",
+      image: "/extension_thumbnail.png",
+      year: "2026",
+      url: "/projects/pixieditor-extension-store",
+      category: "case-study",
+    },
+    {
+      title: "Loading Products Research",
+      description: "User research that changed what we actually shipped.",
+      image: "/loading_workshops.png",
+      year: "2025",
+      url: "/projects/loading-group",
+      category: "case-study",
+    },
+    {
+      title: "Redesigning pixieditor.net",
+      description: "Designed a website for an editor with 200k+ users.",
+      image: "/pixi_thumbnail.png",
+      year: "2025",
+      url: "/projects/pixieditor-website",
+      category: "case-study",
+    },
+    {
+      title: "Linked Accounts Redesign",
+      description: "A process that could take up to 5 hours to set up one operator's access now takes a few minutes.",
+      image: "/linked_accounts.png",
+      year: "2024",
+      url: "/projects/linked-accounts",
+      category: "case-study",
+    },
     // {
     //   title: "Edge Cases Workshop",
     //   description: "Facilited a cross-functional workshop to surface and resolve product edge cases.",
@@ -147,32 +165,20 @@ export const projectsPageContent: ProjectPageContent = {
     //   url: "/projects/edge-cases-workshop",
     // },
     {
-      title: "Fixing Extension Discoverability",
-      description: "Paid extension sales grew ~7.8x in 25 days after solving a discoverability problem.",
-      image: "/extension_thumbnail.png",
-      year: "2026",
-      url: "/projects/pixieditor-extension-store",
-    },
-    // {
-    //   title: "PixiEditor Website",
-    //   description: "Drove a major release launch for an editor with 200k+ users. Shipped it in direct collaboration with the engineering team.",
-    //   image: "/pixieditor.png",
-    //   year: "2025",
-    //   url: "/projects/pixieditor-website",
-    // },
-    {
       title: "Ratusz24",
       description: "1st place at a design competition. Designed an online service that lets users handle administrative matters online.",
       image: "/ratusz_thumbnail.png",
       year: "2025",
       url: "/projects/rekord24",
+      category: "hackathon",
     },
-        {
+    {
       title: "Humi",
       description: "3rd place on local hackaton. Designed an AI-powered meeting assistant, creating the product experience and animated visual assets in Figma and Lottie",
       image: "/humi_thumbnail.png",
       year: "2025",
       url: "/projects/humi",
+      category: "hackathon",
     },
     {
       title: "Apteczka na Szlaku",
@@ -180,6 +186,7 @@ export const projectsPageContent: ProjectPageContent = {
       image: "/apetczka_thumbnail.png",
       year: "2024",
       url: "/projects/apteczka",
+      category: "hackathon",
     },
   ],
 };

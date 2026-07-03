@@ -5,8 +5,8 @@ import Layout from "../../layouts/Layout.astro";
 const seo = {
   title: "Loading Group of Products | Anna Kocaj",
   description:
-    "Case study placeholder: moving product-group loading from recall to recognition to reduce user effort.",
-  image: "/portfolio.png",
+    "Research-driven redesign of the Vendos machine loading flow — and the decision not to ship the bigger redesign once testing showed the trade-off.",
+  image: "/loading_workshops.png",
 };
 ---
 
@@ -21,13 +21,14 @@ const seo = {
     </a>
 
     <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
-      Case Study
+      Case Study · 2025
     </p>
     <h1 class="font-bold text-3xl mb-4 leading-snug">
-      Improving Loading of Product Groups
+      Loading Products Research
     </h1>
     <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
-      Moving product-group loading from recall to recognition to reduce user effort.
+      A redesign that made loading easier for first-time storekeepers, but also
+      made it slower for experienced ones.
     </p>
 
     <!-- Overview grid -->
@@ -35,85 +36,149 @@ const seo = {
       class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
     >
       <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Role</p>
-        <p class="text-sm font-medium">TBD</p>
-      </div>
-      <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
-          Timeline
-        </p>
-        <p class="text-sm font-medium">TBD</p>
-      </div>
-      <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Team</p>
-        <p class="text-sm font-medium">TBD</p>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">My Role</p>
+        <p class="text-sm font-medium">Product Designer</p>
       </div>
       <div>
         <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Tools</p>
-        <p class="text-sm font-medium">TBD</p>
+        <p class="text-sm font-medium">Figma, Miro</p>
       </div>
     </div>
 
     <!-- Hero image -->
-    <div class="rounded-xl overflow-hidden mb-16 bg-gray-800">
+    <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
       <Image
-        src="/portfolio.png"
-        alt="Loading Group of Products placeholder"
+        src="/loading_workshops.png"
+        alt="Zoom out on Miro Board"
         width={1200}
         height={675}
         class="w-full object-cover"
       />
-      <p class="text-xs opacity-30 text-center py-2">
-        Placeholder — replace with actual product screenshot
-      </p>
     </div>
   </section>
 
   <!-- CHALLENGE -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Describe why recall-based loading was a problem for users</em>
-    </div>
+    <p class="opacity-70 leading-relaxed mb-4">
+      Vendos machines are loaded by storekeepers with health & safety products.
+      Our business strategy set a hard requirement: clients should never need
+      training to use the product, so distribution stays uninterrupted and their
+      staff's time stays free for other work.
+    </p>
+    <p class="opacity-70 leading-relaxed">
+      We didn't actually know whether the current loading flow met that bar. The
+      research question was simple and specific: <strong
+        >can someone load the machine correctly with zero training?</strong
+      >
+    </p>
   </section>
 
   <!-- PROCESS -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-8">Process</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add research, design, and iteration steps</em>
-    </div>
-  </section>
 
-  <!-- OUTCOMES -->
-  <section class="max-w-2xl mx-auto px-6 mb-16">
-    <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add task-time or error-rate metrics</em>
+    <div class="space-y-12">
+      <!-- Step 1 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          01 — Research
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Watching people load a machine they've never seen
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          I designed and led task-based usability sessions. Participants has
+          never used the product before, simulating a real first day on the job.
+          Each was handed a QR code and a key and asked to play the role of a
+          new storekeeper: load 5 gloves into the machine, then log out.
+          Follow-up questions stayed neutral: what surprised you, what did you
+          expect to happen, how would you explain this to someone else. A
+          teammate observed each session, tracking reactions and friction
+          points, with a short debrief after every participant.
+        </p>
+        <p class="opacity-70 leading-relaxed text-sm">
+          The findings clustered into three groups: missing feedback, unclear
+          guidance, and physical friction. The pattern across all of it: <strong
+            >the loading task itself was simple, the real problem was the
+            first-time experience.</strong
+          >
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          02 — Concept
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Designing for someone who's never seen this machine
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          I redesigned loading flow that addressed the research findings
+          directly: confirmation after every action, an explicit "finish
+          loading" step, precise cell-range guidance instead of a misleading
+          range and short contextual prompts guiding each physical step.
+        </p>
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/loading_mockups.png"
+            alt="Redesigned beginner-focused loading flow"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          03 — Validate & Decide
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Better for newcomers, worse for the everyday case
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          When we tested the redesign, it worked as intended for first-time
+          users, but it also made the process noticeably longer for experienced
+          storekeepers who already knew what they were doing. That mattered:
+          Vendos machines aren't loaded once, they're loaded by the same people,
+          repeatedly, as part of their regular job. Optimizing purely for a
+          first-time experience would have made the everyday case worse for the
+          people who use the machine most. Rather than ship a design that traded
+          one user's efficiency for another's, we made the call not to ship the
+          full redesign. Instead, we shipped smaller fixes from the research
+          without adding any extra steps to the flow experienced storekeepers
+          already knew.
+        </p>
+      </div>
+    </div>
+    <div>
+      <p class="opacity-70 leading-relaxed text-sm">
+        The research also reframed the problem itself: since the loading task is
+        fundamentally simple, first-time friction is better solved outside the
+        loading screen, through onboarding, not by adding weight to a flow that
+        thousands repeat every day.
+      </p>
     </div>
   </section>
 
   <!-- NAVIGATION -->
   <section
-    class="max-w-2xl mx-auto px-6 mb-16 flex justify-between items-center border-t border-white/10 pt-8"
+    class="max-w-2xl mx-auto px-6 mb-16 flex justify-center items-center border-t border-white/10 pt-8"
   >
     <a
-      href="/projects/linked-accounts"
+      href="/projects"
       class="opacity-50 hover:opacity-100 transition-opacity text-sm"
     >
-      ← Linked Accounts Redesign
-    </a>
-    <a
-      href="/projects/edge-cases-workshop"
-      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
-    >
-      Next: Edge Cases Workshop →
+      ← All projects
     </a>
   </section>
 </Layout>

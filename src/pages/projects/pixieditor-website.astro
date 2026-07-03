@@ -3,10 +3,10 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 
 const seo = {
-  title: "PixiEditor Website | Anna Kocaj",
+  title: "PixiEditor 2.0 Website | Anna Kocaj",
   description:
-    "How I drove the launch of the PixiEditor 2.0 website — content strategy, video production, and Figma design for an editor with 200k+ users.",
-  image: "/pixieditor.png",
+    "Redesigning pixieditor.net for the 2.0 launch to prove the editor's breadth and fund the project through the Founder's Pack.",
+  image: "/pixieditor-website-hero.png",
 };
 ---
 
@@ -21,16 +21,26 @@ const seo = {
     </a>
 
     <p class="text-sm opacity-50 uppercase tracking-widest mb-3 font-medium">
-      Case Study · June 2025
+      Case Study · 2025
     </p>
     <h1 class="font-bold text-3xl mb-4 leading-snug">
-      PixiEditor Website — 2.0 Release
+      Redesigning pixieditor.net
     </h1>
+    <a
+      href="https://www.figma.com/design/1CyOD1iZ3xpeqR0Yjyyy6W/PixiEditor-2.0-Website?node-id=0-1&t=d6B2oAJvmSdYFzns-1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group/link inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium opacity-70 hover:opacity-100 hover:border-accent transition-all duration-300 mb-4 w-fit"
+    >
+      View in Figma
+      <span
+        aria-hidden="true"
+        class="transition-transform duration-300 group-hover/link:translate-x-0.5"
+        >→</span
+      >
+    </a>
     <p class="text-lg opacity-70 mb-8 max-w-xl leading-relaxed">
-      Driving a major release launch for an editor with <strong
-        >200k+ users</strong
-      > — content strategy, video production, and Figma design, shipped with
-      the engineering team.
+      A website built to prove PixiEditor could replace your design toolkit.
     </p>
 
     <!-- Overview grid -->
@@ -38,85 +48,156 @@ const seo = {
       class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-t border-b border-white/10 mb-10"
     >
       <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Role</p>
-        <p class="text-sm font-medium">Product Designer, Co-founder</p>
-      </div>
-      <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
-          Timeline
-        </p>
-        <p class="text-sm font-medium">June 2025</p>
-      </div>
-      <div>
-        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Team</p>
-        <p class="text-sm font-medium">Engineering</p>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">My Role</p>
+        <p class="text-sm font-medium">Product Designer</p>
       </div>
       <div>
         <p class="text-xs uppercase tracking-widest opacity-40 mb-1">Tools</p>
-        <p class="text-sm font-medium">Figma, Video</p>
+        <p class="text-sm font-medium">Figma</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest opacity-40 mb-1">
+          Live site
+        </p>
+        <p class="text-sm font-medium">
+          <a
+            href="https://pixieditor.net"
+            class="underline"
+            target="_blank"
+            rel="noopener">pixieditor.net</a
+          >
+        </p>
       </div>
     </div>
 
     <!-- Hero image -->
-    <div class="rounded-xl overflow-hidden mb-16 bg-gray-800">
+    <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
       <Image
-        src="/pixieditor.png"
-        alt="PixiEditor website"
+        src="/pixi_thumbnail.png"
+        alt="PixiEditor thumbnail"
         width={1200}
         height={675}
         class="w-full object-cover"
       />
-      <p class="text-xs opacity-30 text-center py-2">
-        Placeholder — replace with final site screenshot
-      </p>
     </div>
   </section>
 
   <!-- CHALLENGE -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-4">The Challenge</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Describe the 2.0 release goals and constraints for the site redesign</em>
-    </div>
+    <p class="opacity-70 leading-relaxed mb-4">
+      PixiEditor had grown from a pixel art tool into a universal 2D graphics
+      editor with procedural art, vector design, image editing, drawing, and
+      animation, alongside its pixel art roots.
+    </p>
+    <p class="opacity-70 leading-relaxed">
+      As an open-source project, the Founder's Bundle, sold directly through
+      this site, was our
+      <strong>main source of funding</strong>. It had to earn enough trust from
+      visitors of a free, community-driven project to convince them to actually
+      pay for it.
+    </p>
   </section>
 
   <!-- PROCESS -->
   <section class="max-w-2xl mx-auto px-6 mb-16">
     <h2 class="font-semibold text-xl mb-8">Process</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add content strategy, video production, and design steps</em>
-    </div>
-  </section>
 
-  <!-- OUTCOMES -->
-  <section class="max-w-2xl mx-auto px-6 mb-16">
-    <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
-    <div
-      class="p-4 rounded-lg border border-white/10 bg-white/5 text-sm opacity-50"
-    >
-      📌 <em>Placeholder: Add launch metrics or user feedback</em>
+    <div class="space-y-12">
+      <!-- Step 1 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          01 — Define
+        </p>
+        <h3 class="font-medium text-base mb-3">All in one</h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          The old site led with pixel art and buried everything else,
+          undermining the "universal editor" positioning we needed for 2.0. At
+          the same time, asking a visitor to pay for free, open-source software
+          is a harder sell than a typical SaaS checkout. We needed to build real
+          credibility before ever mentioning the Founder's Bundle.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          02 — Concept
+        </p>
+        <h3 class="font-medium text-base mb-3">Finding the right structure</h3>
+        <p class="opacity-70 leading-relaxed text-sm mb-4">
+          I opened the new homepage with a tagline "Universal 2D Graphics
+          Editor, one to rule them all" followed by a scannable breakdown of
+          PixiEditor's six core capabilities: Procedural Art, Pixel Art, Image
+          Editing, Drawing, Vector Art, and Animations. A visitor who came in
+          thinking "pixel art tool" could see within seconds everything else it
+          actually did.
+        </p>
+        <!-- TODO: replace with a screenshot of the six-category breakdown section -->
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/pixi_hero.png"
+            alt="PixiEditor website six-category feature breakdown"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div>
+        <p
+          class="text-xs uppercase tracking-widest opacity-40 mb-2 font-medium"
+        >
+          03 — Design & Ship
+        </p>
+        <h3 class="font-medium text-base mb-3">
+          Designing, filming, and shipping
+        </h3>
+        <p class="opacity-70 leading-relaxed text-sm">
+          I designed the full site in Figma, produced the launch videos and
+          written content, and worked directly with our developers during
+          implementation to make sure the final build matched the design intent.
+        </p>
+        <!-- TODO: replace with a screenshot of the trust/social proof section -->
+        <div class="rounded-xl overflow-hidden m-6 bg-gray-800">
+          <Image
+            src="/pixi_reviews.png"
+            alt="PixiEditor website trust and social proof section"
+            width={1200}
+            height={675}
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
     </div>
+
+    <!-- OUTCOMES -->
+    <section class="max-w-2xl mx-auto px-6 mb-16">
+      <h2 class="font-semibold text-xl mb-6">Outcomes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-4">
+        <div class="p-6 rounded-xl border border-white/10 bg-white/5">
+          <p class="text-4xl font-bold mb-1">500+ sales</p>
+          <p class="text-sm opacity-60">of Founder's Bundle in one year.</p>
+        </div>
+      </div>
+    </section>
   </section>
 
   <!-- NAVIGATION -->
   <section
-    class="max-w-2xl mx-auto px-6 mb-16 flex justify-between items-center border-t border-white/10 pt-8"
+    class="max-w-2xl mx-auto px-6 mb-16 flex justify-center items-center border-t border-white/10 pt-8"
   >
     <a
-      href="/projects/edge-cases-workshop"
+      href="/projects"
       class="opacity-50 hover:opacity-100 transition-opacity text-sm"
     >
-      ← Edge Cases Workshop
-    </a>
-    <a
-      href="/projects/pixieditor-extension-store"
-      class="opacity-50 hover:opacity-100 transition-opacity text-sm"
-    >
-      Next: PixiEditor Extension Store →
+      ← All projects
     </a>
   </section>
 </Layout>

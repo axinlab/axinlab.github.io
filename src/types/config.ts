@@ -68,6 +68,7 @@ export type Project = {
   image: string;
   year: string;
   url: string;
+  category?: "case-study" | "hackathon";
 };
 
 export type ProjectPageContent = {
